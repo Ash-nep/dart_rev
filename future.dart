@@ -1,10 +1,10 @@
 // futures in dart
-void main()  {
-  fetchPost().then((p){
-    print(p.title);
-    print(p.userId);
-  });
+void main()  async {
+  final post = await fetchPost();
+  print(post.title);
+  print(post.userId);
 }
+
 
 Future fetchPost() {
   const delay = Duration(seconds: 3);
